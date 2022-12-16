@@ -1,0 +1,20 @@
+:toc: left
+:toclevels: 3
+:sectnums:
+:doctype: book
+
+= Parent Pom
+
+Általános maven fő pom.xml, amit minden InnovITech Kft. projekt tartalmaz.
+
+A projekt célja, hogy a cégben a projektek azonos általános beállításokkal működjenek. Összegyűjti a közös beállításokat, azonosítókat így elkerülhető a fejlesztői beállítások összeakadása. Továbbá segít frissen tartani a plugineket, bugok esetén közös workaround-ot tesz lehetővé.
+
+.Minimum feltételek
+* Java 8+
+* Maven 3.3.0+
+
+include::pom/pom.adoc[leveloffset=+1]
+
+include::release/release.adoc[leveloffset=+1]
+
+include::migration/migration.adoc[leveloffset=+1]

@@ -1,0 +1,62 @@
+= Releaselési folyamat
+
+Mivel a projekt ősként szolgál a többi projekten így ezt figyelembe kell venni a release kiadásakor. Ennek értelmében nem "klasszikus" maven beállításokkal fogjuk a releaselést elvégezni. Az oka ennek az, hogy ennek a projektnek a beállításait leörökölné a cél projekt és az nagyon nem kívánt eseményekhez vezethetne. Ezt elkerülvén minden release beállítást egy `parent-pom-release` maven profile alá kell helyezni.
+
+== Release kiadása
+Maga a release folyamat 4 lépésből áll:
+
+=== Ellenőrzés
+
+Ez a lépés szolgál arra, hogy technikai oldalról ellenőrizzük le: a maven minden beállítása és release követelménye megvan.
+
+[source,bash]
+----
+mvn -B -Pparent-pom-release release:prepare -DdryRun=true
+----
+
+A parancs részletei:
+
+- mvn -> maven executable parancs
+- -B -> batch futás - ne kérjen be konzolból megerősítéseket a maven
+- -Pparent-pom-release -> aktiválja a `parent-pom-release` maven profilt
+- release:prepare -> maven-release-plugin része, indítja az SCM oldali verzió kiadását
+- -DdryRun=true -> kapcsoló, hogy a verzió kiadás csak "virtuális" legyen, tehát hogy csak ellenőrzés céljából indítjuk
+
+Ennek a lépésnek le kell futnia minden hiba nélkül. Amennyiben ez nem sikerül, úgy az esetleges hibákat javítani kell, mert a valós verziókiadás sem fog addig lefutni.
+
+=== Tisztítás
+
+Az előző lépésből létrejött átmeneti fájlokat töröljük, hogy ne zavarjanak bele a valódi verziókiadásba.
+
+[source,bash]
+----
+mvn -B release:clean
+----
+
+A parancs részletei:
+
+- mvn -> maven executable parancs
+- -B -> batch futás - ne kérjen be konzolból megerősítéseket a maven
+- release:clean -> maven-release-plugin része, tisztítja a target könyvtárat és törli a temporális release fájlokat
+
+=== SCM verzió módosítás
+
+Valós SCM verzió kiadását az alábbi parancs futtatásával indíthatjuk el:
+
+[source,bash]
+----
+mvn -B -Pparent-pom-release release:prepare
+----
+
+A parancs részletei:
+
+- mvn -> maven executable parancs
+- -B -> batch futás - ne kérjen be konzolból megerősítéseket a maven
+- -Pparent-pom-release -> aktiválja a `parent-pom-release` maven profilt
+- release:prepare -> maven-release-plugin része, indítja az SCM oldali verzió kiadását
+
+A parancs sikeres futásához előkövetelmények:
+
+- környezeti beállítások felkészítése konzolos maven, git és java futásra.
+- lokális `settings.xml` tartalmazza a `pom.xml`-ben szereplő szerverek alap illetve authentikációs adatait.
+- java verzióban szerverek tanusítványainak elhelyezése.

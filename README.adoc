@@ -1,0 +1,51 @@
+image:https://github.com/innovitech-org/parent-pom/actions/workflows/compile.yml/badge.svg?style=plastic[GitHub Compile Workflow Status]
+
+:toc: left
+:toclevels: 3
+:sectnums:
+
+= parent-pom
+
+Általános maven fő pom.xml, amit minden InnovITech Kft. projekt tartalmaz.
+
+A projekt célja, hogy a cégben a projektek azonos általános beállításokkal működjenek.
+Összegyűjti a közös beállításokat, azonosítókat így elkerülhető a fejlesztői beállítások összeakadása.
+Továbbá segít frissen tartani a plugineket, bugok esetén közös workaround-ot tesz lehetővé.
+
+
+== Maven central
+A projekt buildelve van a official maven repository-ba is,
+így a projektek automatán lehúzzák:
+
+.Általános beállítások
+[source, xml]
+----
+    <dependency>
+        <groupId>hu.innovitech.pom</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>${version}</version>
+    </dependency>
+----
+
+.innovitech nexus beállítások
+[source, xml]
+----
+    <dependency>
+        <groupId>hu.innovitech.pom</groupId>
+        <artifactId>parent-innovitech-pom</artifactId>
+        <version>${version}</version>
+    </dependency>
+----
+
+.innovitech open-source projektek beállítása
+[source, xml]
+----
+    <dependency>
+        <groupId>hu.innovitech.pom</groupId>
+        <artifactId>parent-oss-pom</artifactId>
+        <version>${version}</version>
+    </dependency>
+----
+
+== Leírás
+Bővebb leírás a https://innovitech-org.github.io/parent-pom/ oldalon található.
