@@ -38,7 +38,7 @@ jobs:
     name: Maven release
 
     # Permission ellenorzes https://github.community/t/who-has-permission-to-workflow-dispatch/133981
-    if: contains('["rombow"]', github.actor)
+    if: contains('["rombow","speter555"]', github.actor)
 
     runs-on: ubuntu-latest
 
@@ -91,7 +91,7 @@ jobs:
       - name: Setup GIT token
         uses: fregante/setup-git-token@v1
         with:
-          # The token provided by GitHub actions via secrets.GITHUB_TOKEN
+          # The token provided by GitHub actions via secrets.GH_TOKEN_TECHUSER_JAVA
           token: ${{ secrets.GH_TOKEN_TECHUSER_JAVA }}
           # The name that will be used as "Author" of future commits
           name: innovitech-robot
