@@ -1,0 +1,77 @@
+= POM struktúra
+
+A projekt több pom.xml fájlt is tartalmaz.
+
+== parent-pom
+Ez a legfelső pom.xml fájl. Ebből indul ki minden többi pom.xml.
+
+.pom.xml
+[source,xml]
+----
+<groupId>hu.innovitech.pom</groupId>
+<artifactId>parent-pom</artifactId>
+----
+
+Tartalma csak teljesen általános elemekből áll.
+
+Beállítások:
+
+- UTF-8 karakterkódolás
+- dátum formátum
+- szervezet
+- fejlesztők
+- Redmine elérés
+
+Build:
+
+- Maven pluginok verziószámmal, általános beállításokkal.
+
+Profilok:
+
+- jdk8 - aktiválódik hogyha JDK 8 -es környezettel kompiláljuk a projektet
+- jdk11 - aktiválódik hogyha JDK 11 -es környezettel kompiláljuk a projektet
+- jdk17 - aktiválódik hogyha JDK 17 -es környezettel kompiláljuk a projektet
+- parent-pom-release - kézzel kell aktiválni hogyha a 'parent-pom'-ból új release-t készítünk
+
+
+== parent-innovitech-pom
+Gyerek pom, mely örökli a `parent-pom` összes beállítását és kiegészíti az innovitech domain specifikus beállításokkal.
+
+.innovitech/pom.xml
+[source,xml]
+----
+<artifactId>parent-innovitech-pom</artifactId>
+----
+
+Beállítások:
+
+- Repository
+* innovitech-public-repository
+* jboss-public-repository
+* maven-central
+- Distribution Management
+* Snapshot tárhely
+* Release tárhely
+
+
+== parent-oss-pom
+Ez egy 'gyerek' pom, ami örökli a parent-pom összes beállításait, és kiegészíti azt az innovitech open source specifikus beállításokkal.
+
+.oss/pom.xml
+[source,xml]
+----
+<groupId>hu.innovitech.pom</groupId>
+<artifactId>parent-oss-pom</artifactId>
+----
+
+Tartalma az aktuális public maven central publikálásához szükséges beállításait célozza meg.
+Ezek közé tartoznak a következők:
+
+Beállítások:
+
+- license
+- pluginManagement
+- release profil
+- distributionManagement
+- gpg aláírás
+- sonatype public nexus plugin kezelés

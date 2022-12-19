@@ -1,0 +1,29 @@
+# Maven
+target/
+
+# Compiled class file
+*.class
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Mac
+.DS_Store
