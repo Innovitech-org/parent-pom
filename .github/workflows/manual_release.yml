@@ -80,7 +80,7 @@ jobs:
       #  uses: OleksiyRudenko/gha-git-credentials@v1
       #  with:
       #    # <git-user-email@domain.com> (default: github-action@users.noreply.github.com)
-      #    email: github_-echuser@innovitech.hu
+      #    email: github-techuser@innovitech.hu
       #    # Git User Name (default: "GitHub Action")
       #    name: innovitech-robot
       #    # GitHub Actor Username (default: github.actor)
