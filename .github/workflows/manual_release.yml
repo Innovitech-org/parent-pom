@@ -80,7 +80,7 @@ jobs:
       #  uses: OleksiyRudenko/gha-git-credentials@v1
       #  with:
       #    # <git-user-email@domain.com> (default: github-action@users.noreply.github.com)
-      #    email: github_techuser@innovitech.hu
+      #    email: github-techuser@innovitech.hu
       #    # Git User Name (default: "GitHub Action")
       #    name: innovitech-robot
       #    # GitHub Actor Username (default: github.actor)
@@ -97,7 +97,7 @@ jobs:
       #    # The name that will be used as "Author" of future commits
       #    name: innovitech-robot
       #    # The email that will be used as "Author" of future commits
-      #    email: github_techuser@innovitech.hu
+      #    email: github-techuser@innovitech.hu
 
       - name: Configure GIT for signed commit
         env:
@@ -105,7 +105,7 @@ jobs:
           GPG_KEY_ID_GITHUB_TECHUSER: ${{ secrets.GPG_KEY_ID_GITHUB_TECHUSER }}
         run: |
           git config --global user.name "innovitech-robot"
-          git config --global user.email "github_techuser@innovitech.hu"
+          git config --global user.email "github-techuser@innovitech.hu"
           git config --global user.signingkey "$GPG_KEY_ID_GITHUB_TECHUSER"
           git config --global commit.gpgsign true
           git config --global tag.gpgSign true
