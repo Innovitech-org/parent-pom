@@ -31,7 +31,7 @@ jobs:
         # GPG kulcs azonositoja
         GPG_KEY_ID_GITHUB_TECHUSER: ${{ secrets.GPG_KEY_ID_GITHUB_TECHUSER }}
       run: |
-        git config --global user.name "innovitech-robot"
+        git config --global user.name "Innovitech-admin"
         git config --global user.email "github-techuser@innovitech.hu"
         git config --global user.signingkey "$GPG_KEY_ID_GITHUB_TECHUSER"
         git config --global commit.gpgsign true

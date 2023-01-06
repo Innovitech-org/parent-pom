@@ -82,7 +82,7 @@ jobs:
       #    # <git-user-email@domain.com> (default: github-action@users.noreply.github.com)
       #    email: github-techuser@innovitech.hu
       #    # Git User Name (default: "GitHub Action")
-      #    name: innovitech-robot
+      #    name: Innovitech-admin
       #    # GitHub Actor Username (default: github.actor)
       #    #actor: Github TechUser
       #    # GitHub Token (default: secrets.GH_TOKEN_TECHUSER_JAVA)
@@ -95,7 +95,7 @@ jobs:
       #    # The token provided by GitHub actions via secrets.GH_TOKEN_TECHUSER_JAVA
       #    token: ${{ secrets.GH_TOKEN_TECHUSER_JAVA }}
       #    # The name that will be used as "Author" of future commits
-      #    name: innovitech-robot
+      #    name: Innovitech-admin
       #    # The email that will be used as "Author" of future commits
       #    email: github-techuser@innovitech.hu
 
@@ -104,7 +104,7 @@ jobs:
           # GPG kulcs azonositoja
           GPG_KEY_ID_GITHUB_TECHUSER: ${{ secrets.GPG_KEY_ID_GITHUB_TECHUSER }}
         run: |
-          git config --global user.name "innovitech-robot"
+          git config --global user.name "Innovitech-admin"
           git config --global user.email "github-techuser@innovitech.hu"
           git config --global user.signingkey "$GPG_KEY_ID_GITHUB_TECHUSER"
           git config --global commit.gpgsign true
