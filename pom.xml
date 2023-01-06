@@ -369,7 +369,7 @@
 
 			<properties>
 				<project.scm.id>innovitech-github-server</project.scm.id>
-				<developerConnection>scm:git:git@github.com:innovitech-org/parent-pom.git</developerConnection>
+				<developerConnection>scm:git:git@github.com:Innovitech-org/parent-pom.git</developerConnection>
 
 				<nexus-staging-maven-plugin.version>1.6.8</nexus-staging-maven-plugin.version>
 			</properties>
