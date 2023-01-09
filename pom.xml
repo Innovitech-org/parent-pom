@@ -3,7 +3,7 @@
 
 	<groupId>hu.innovitech.pom</groupId>
 	<artifactId>parent-pom</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<properties>
@@ -49,7 +49,7 @@
 		<connection>${developerConnection}</connection>
 		<developerConnection>${developerConnection}</developerConnection>
 		<url>https://github.com/innovitech-org/parent-pom.git</url>
-		<tag>parent-pom-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<build>
