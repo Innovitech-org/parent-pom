@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>hu.innovitech.pom</groupId>
 		<artifactId>parent-pom</artifactId>
-		<version>0.9.0</version>
+		<version>0.9.1-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>parent-innovitech-pom</artifactId>
