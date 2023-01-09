@@ -3,6 +3,10 @@
 
 name: Compile project with Maven
 on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
   pull_request:
     branches-ignore:
       - 'gh-pages'
