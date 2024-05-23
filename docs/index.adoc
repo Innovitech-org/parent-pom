@@ -10,8 +10,8 @@
 A projekt célja, hogy a cégben a projektek azonos általános beállításokkal működjenek. Összegyűjti a közös beállításokat, azonosítókat így elkerülhető a fejlesztői beállítások összeakadása. Továbbá segít frissen tartani a plugineket, bugok esetén közös workaround-ot tesz lehetővé.
 
 .Minimum feltételek
-* Java 8+
-* Maven 3.3.0+
+* Java 11+
+* Maven 3.8.6+
 
 include::pom/pom.adoc[leveloffset=+1]
 
