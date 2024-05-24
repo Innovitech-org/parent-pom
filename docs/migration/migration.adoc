@@ -7,3 +7,4 @@
 - Frissítve lettek a maven plugin definíciók
 - Minimum maven verzió 3.3.0 -> 3.8.6
 - maven-release-plugin taggelésnél `@{project.version}` fogja használni az alapértelmezett helyett
+- Bekerült új `jandex-maven-plugin` ami a `META-INF` könyvtárba készít index file-t
