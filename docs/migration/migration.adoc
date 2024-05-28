@@ -1,2 +1,10 @@
 = Migrációs leírások
 
+== 1.1.0
+
+- Java 8 profil törölve lett (több plugin már nem támogatja)
+- Új java 21 profil
+- Frissítve lettek a maven plugin definíciók
+- Minimum maven verzió 3.3.0 -> 3.8.6
+- maven-release-plugin taggelésnél `@{project.version}` fogja használni az alapértelmezett helyett
+- Bekerült új `jandex-maven-plugin` ami a `META-INF` könyvtárba készít index file-t

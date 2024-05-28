@@ -20,7 +20,6 @@ Beállítások:
 - dátum formátum
 - szervezet
 - fejlesztők
-- Redmine elérés
 
 Build:
 
@@ -28,16 +27,16 @@ Build:
 
 Profilok:
 
-- jdk8 - aktiválódik hogyha JDK 8 -es környezettel kompiláljuk a projektet
 - jdk11 - aktiválódik hogyha JDK 11 -es környezettel kompiláljuk a projektet
 - jdk17 - aktiválódik hogyha JDK 17 -es környezettel kompiláljuk a projektet
+- jdk21 - aktiválódik hogyha JDK 21 -es környezettel kompiláljuk a projektet
 - parent-pom-release - kézzel kell aktiválni hogyha a 'parent-pom'-ból új release-t készítünk
 
 
 == parent-innovitech-pom
 Gyerek pom, mely örökli a `parent-pom` összes beállítását és kiegészíti az innovitech domain specifikus beállításokkal.
 
-.innovitech/pom.xml
+.parent-innovitech-pom/pom.xml
 [source,xml]
 ----
 <artifactId>parent-innovitech-pom</artifactId>
