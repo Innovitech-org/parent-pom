@@ -80,6 +80,8 @@
 						<scmCommentPrefix>maven release:</scmCommentPrefix>
 						<useReleaseProfile>true</useReleaseProfile>
 						<tagNameFormat>@{project.version}</tagNameFormat>
+						<scmReleaseCommitComment>Prepare release ${project.version}</scmReleaseCommitComment>
+						<scmDevelopmentCommitComment>Bump version to ${project.version}</scmDevelopmentCommitComment>
 					</configuration>
 				</plugin>
 				<plugin>
